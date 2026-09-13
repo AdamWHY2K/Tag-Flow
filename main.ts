@@ -436,7 +436,7 @@ export default class TagFlowPlugin extends Plugin {
 	
 		try {
 			const cleanedContent = await this.filterContent(file);
-			const tagMatches = cleanedContent.match(/#([a-zA-Z0-9_-]+)/g);
+			const tagMatches = cleanedContent.match(/#[a-zA-Z0-9_/-]+/g);
 	
 			const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?/;
 			const fmMatch = cleanedContent.match(frontMatterRegex);
